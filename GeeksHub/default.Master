@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.master.cs" Inherits="GeeksHub._default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>GeeksHub</title>
+    <script src="JavaScript.js"></script>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style1">
+                <tr>
+                    <td rowspan="4">
+               &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Image ID="Image1" runat="server" BackColor="Black" BorderStyle="Double" CssClass="auto-style1" EnableTheming="True" Height="146px" ImageUrl="~/images/titleImage.png" Width="1335px" />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                <nav class="topnav">
+                     <div class="topnav-right">
+                           <a href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
+                           <a href="#login"><i class="fa fa-fw fa-user"></i>Login</a>
+                           <a href="#signup"><i class="fa-sign-in"></i>Sign Up</a>
+                         <a href="#search"><i class="fa fa-fw fa-search"></i>Search</a>
+                         </div>
+                    <div class="container" onclick="myFunction(this)">
+                          <div class="bar1"></div>
+                          <div class="bar2"></div>
+                          <div class="bar3"></div>
+                    </div>
+                </nav>                            
+                                  
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    <table class="auto-style1">
+        <tr>
+             <td colspan="2">       
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        </table>
+    </form>
+    </body>
+</html>
