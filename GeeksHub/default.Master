@@ -25,13 +25,7 @@
                     <td rowspan="4">
                &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <%--<asp:Image ID="Image1" runat="server" BackColor="Black" BorderStyle="Double" CssClass="auto-style1" EnableTheming="True" Height="146px" ImageUrl="~/images/titleImage.png" Width="1335px" /--%>
-                      <div class="img-box"><img  class="img-box" src="images/titleImage.png" alt="Frobozz Company" > </div>
-
-
-
-
-
-
+                      <div class="img-box"><img  class="img-box" src="images/titleImage.png" alt="Can't Load Image at the moment" > </div>
                    </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -74,7 +68,6 @@
                          document.getElementById("mySidenav").style.width = "180px";
                          document.getElementById("main").style.marginLeft = "180px";
                        }
-
                        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
                        function closeNav() {
                          document.getElementById("mySidenav").style.width = "0";
@@ -89,14 +82,34 @@
                 </tr>
             </table>
         </div>
-    <table class="auto-style1">
-        <tr>
-             <td colspan="2">       
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-            </asp:ContentPlaceHolder>
-            </td>
-        </tr>
-        </table>
+        <br />
+         <div>
+            <table class="auto-style1">
+                <tr>
+                    <td colspan="2">                                    
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div>
+            <table class="auto-style1">
+                <tr>
+                    <td colspan="2">                    
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                          <%--  <footer>
+                                <a href="#aboutus">About Us</a>
+                                <a href="#contactus">Contact</a>
+                            </footer>
+                            <p class="mycss">&reg; 2020 GeeksHub.com |</p>--%>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+            
     </form>
     </body>
 </html>
