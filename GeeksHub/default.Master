@@ -5,8 +5,9 @@
 <html>
 <head runat="server">
     <title>GeeksHub</title>
+    <link href="CSS/StyleSheet1.css" rel="stylesheet" />
+    <link href="CSS/sidenav.css" rel="stylesheet" />
     <script src="JavaScript.js"></script>
-    <link href="StyleSheet1.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -23,8 +24,15 @@
                 <tr>
                     <td rowspan="4">
                &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Image ID="Image1" runat="server" BackColor="Black" BorderStyle="Double" CssClass="auto-style1" EnableTheming="True" Height="146px" ImageUrl="~/images/titleImage.png" Width="1335px" />
-                    </td>
+                        <%--<asp:Image ID="Image1" runat="server" BackColor="Black" BorderStyle="Double" CssClass="auto-style1" EnableTheming="True" Height="146px" ImageUrl="~/images/titleImage.png" Width="1335px" /--%>
+                      <div class="img-box"><img  class="img-box" src="images/titleImage.png" alt="Frobozz Company" > </div>
+
+
+
+
+
+
+                   </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -45,11 +53,34 @@
                            <a href="#signup"><i class="fa-sign-in"></i>Sign Up</a>
                          <a href="#search"><i class="fa fa-fw fa-search"></i>Search</a>
                          </div>
-                    <div class="container" onclick="myFunction(this)">
+
+                    <div id="mySidenav" class="sidenav">
+                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                          <a href="#">About</a>
+                          <a href="#">Services</a>
+                          <a href="#">Contents</a>
+                          <a href="#">Contact</a>
+                     </div>
+                   <%-- <span style="font-size:30px;cursor:pointer " onclick="openNav()"> Open</span>--%>
+
+                      <div class="container" onclick="openNav()">
                           <div class="bar1"></div>
                           <div class="bar2"></div>
                           <div class="bar3"></div>
                     </div>
+
+                    <script>
+                         function openNav() {
+                         document.getElementById("mySidenav").style.width = "180px";
+                         document.getElementById("main").style.marginLeft = "180px";
+                       }
+
+                       /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+                       function closeNav() {
+                         document.getElementById("mySidenav").style.width = "0";
+                         document.getElementById("main").style.marginLeft = "0";
+                       }
+                     </script> 
                 </nav>                            
                                   
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
