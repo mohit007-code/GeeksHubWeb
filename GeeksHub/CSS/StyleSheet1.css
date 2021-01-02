@@ -1,4 +1,8 @@
-﻿
+﻿*{
+    margin:0; padding:0;box-sizing:border-box;
+}
+
+
 .topnav {
     width: 100%;
     background-color: black;
@@ -153,3 +157,4 @@ footer a {
     text-align:center;
     color: white;
 }
+

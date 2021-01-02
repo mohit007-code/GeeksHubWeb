@@ -67,14 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSS\sidenav.css" />
+    <Content Include="CSS\SidebarNav.css" />
     <Content Include="CSS\StyleSheet1.css" />
     <Content Include="default.aspx" />
     <Content Include="images\download.jpg" />
     <Content Include="images\images.jpg" />
+    <Content Include="images\pexels-arshad-sutar-1749303.jpg" />
+    <Content Include="images\pexels-artem-beliaikin-853199.jpg" />
+    <Content Include="images\pexels-fotografierende-1213447.jpg" />
+    <Content Include="images\pexels-pixabay-531321.jpg" />
     <Content Include="images\titleImage.png" />
     <Content Include="images\wired_tech-effects-how-video-games-can-change-your-brain.jpg" />
-    <Content Include="JavaScript.js" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>

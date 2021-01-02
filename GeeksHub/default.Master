@@ -1,32 +1,93 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.master.cs" Inherits="GeeksHub._default" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title>GeeksHub</title>
-    <link href="CSS/StyleSheet1.css" rel="stylesheet" />
-    <link href="CSS/sidenav.css" rel="stylesheet" />
-    <script src="JavaScript.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="CSS/StyleSheet1.css" rel="stylesheet" />
+    <link href="CSS/SidebarNav.css" rel="stylesheet" />
+    <script src="JavaScript.js"></script>
+    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
         .auto-style1 {
             width: 100%;
         }
-        </style>
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td rowspan="4">
-               &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <%--<asp:Image ID="Image1" runat="server" BackColor="Black" BorderStyle="Double" CssClass="auto-style1" EnableTheming="True" Height="146px" ImageUrl="~/images/titleImage.png" Width="1335px" /--%>
-                      <div class="img-box"><img  class="img-box" src="images/titleImage.png" alt="Can't Load Image at the moment" > </div>
-                   </td>
+                    <td rowspan="4">&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div id="demo" class="carousel slide" data-ride="carousel" style="width: 100%; height: 55vh;">
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                                <li data-target="#demo" data-slide-to="3"></li>
+                                <li data-target="#demo" data-slide-to="4"></li>
+                            </ul>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/titleImage.png" alt="Oops! Something went wrong!!" style="width: 100%; height: 55vh;">
+                                    <div class="carousel-caption">
+                                        <h3>Welcome to GeeksHub.com || Created By- Mohit</h3>
+                                        <p>It is always so much fun!</p>
+                                    </div>
+                                </div>
+                                 <div class="carousel-item">
+                                    <img src="images/pexels-pixabay-531321.jpg" alt="New York" style="width: 100%; height: 55vh;">
+                                    <div class="carousel-caption">
+                                        <h3>Learn New Things Daily</h3>
+                                        <p>Explore and learn new and intresting topics daily with us</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/pexels-artem-beliaikin-853199.jpg" alt="Oops! Something went wrong!!" style="width: 100%; height: 55vh;">
+                                    <div class="carousel-caption">
+                                        <h3>Nature</h3>
+                                        <p>Thank you,Nature!</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/pexels-fotografierende-1213447.jpg" alt="Oops! Something went wrong!!" style="width: 100%; height: 55vh;">
+                                    <div class="carousel-caption">
+                                        <h3>Technology</h3>
+                                        <p>Lets Connect with technology</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="carousel-item">
+                                   
+                                    <img src="images/pexels-arshad-sutar-1749303.jpg"  alt="New York" style="width: 100%; height: 55vh;">
+                                    <div class="carousel-caption">
+                                        <h3>And Trees</h3>
+                                        <p>Everyone loves to walk on a road with trees!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+
+
+                        <%-- <div class="img-box"><img  class="img-box" src="images/titleImage.png" alt="Can't Load Image at the moment" > </div>--%>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -40,53 +101,54 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                <nav class="topnav">
-                     <div class="topnav-right">
-                           <a href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
-                           <a href="#login"><i class="fa fa-fw fa-user"></i>Login</a>
-                           <a href="#signup"><i class="fa-sign-in"></i>Sign Up</a>
-                         <a href="#search"><i class="fa fa-fw fa-search"></i>Search</a>
-                         </div>
+                        <nav class="topnav">
+                            <div class="topnav-right">
+                                <a href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
+                                <a href="#login"><i class="fa fa-fw fa-user"></i>Login</a>
+                                <a href="#signup"><i class="fa-sign-in"></i>Sign Up</a>
+                                <a href="#search"><i class="fa fa-fw fa-search"></i>Search</a>
+                            </div>
 
-                    <div id="mySidenav" class="sidenav">
-                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                          <a href="#">About</a>
-                          <a href="#">Services</a>
-                          <a href="#">Contents</a>
-                          <a href="#">Contact</a>
-                     </div>
-                   <%-- <span style="font-size:30px;cursor:pointer " onclick="openNav()"> Open</span>--%>
 
-                      <div class="container" onclick="openNav()">
-                          <div class="bar1"></div>
-                          <div class="bar2"></div>
-                          <div class="bar3"></div>
-                    </div>
+                            <div id="mySidenav" class="sidenav">
+                              
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <a href="#">About</a>
+                                <a href="#">Services</a>
+                                <a href="#">Clients</a>
+                                <a href="#">Contact</a>
+              
+                            </div>
+                            <div class="container" onclick="openNav()">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </div>
+                            <script>
+                                function openNav() {
+                                    document.getElementById("mySidenav").style.width = "150px";
+                                    document.getElementById("main").style.marginLeft = "150px";
+                                    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                                }
 
-                    <script>
-                         function openNav() {
-                         document.getElementById("mySidenav").style.width = "180px";
-                         document.getElementById("main").style.marginLeft = "180px";
-                       }
-                       /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-                       function closeNav() {
-                         document.getElementById("mySidenav").style.width = "0";
-                         document.getElementById("main").style.marginLeft = "0";
-                       }
-                     </script> 
-                </nav>                            
-                                  
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+                                function closeNav() {
+                                    document.getElementById("mySidenav").style.width = "0";
+                                    document.getElementById("main").style.marginLeft = "0";
+                                    document.body.style.backgroundColor = "white";
+                                }
+                            </script>
+                        </nav>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
                     </td>
                 </tr>
             </table>
         </div>
         <br />
-         <div>
+        <div>
             <table class="auto-style1">
                 <tr>
-                    <td colspan="2">                                    
+                    <td colspan="2">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
                         </asp:ContentPlaceHolder>
                     </td>
@@ -97,9 +159,9 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td colspan="2">                    
+                    <td colspan="2">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-                          <%--  <footer>
+                            <%--  <footer>
                                 <a href="#aboutus">About Us</a>
                                 <a href="#contactus">Contact</a>
                             </footer>
@@ -109,7 +171,6 @@
                 </tr>
             </table>
         </div>
-            
     </form>
-    </body>
+</body>
 </html>
