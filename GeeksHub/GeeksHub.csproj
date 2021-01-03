@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\SidebarNav.css" />
-    <Content Include="CSS\StyleSheet1.css" />
+    <Content Include="CSS\StyleSS1.css" />
     <Content Include="default.aspx" />
     <Content Include="images\download.jpg" />
     <Content Include="images\images.jpg" />
@@ -78,7 +78,6 @@
     <Content Include="images\pexels-pixabay-531321.jpg" />
     <Content Include="images\titleImage.png" />
     <Content Include="images\wired_tech-effects-how-video-games-can-change-your-brain.jpg" />
-    <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,7 +107,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
