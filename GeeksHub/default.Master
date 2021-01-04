@@ -12,6 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
     <link href="CSS/StyleSS1.css" rel="stylesheet" />
     <link href="CSS/SidebarNav.css" rel="stylesheet" />
     <script src="JavaScript.js"></script>
@@ -104,7 +105,7 @@
                         <nav class="topnav">
                             <div class="topnav-right">
                                 <a href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
-                                <a href="#login"><i class="fa fa-fw fa-user"></i>Login</a>
+                                <a  href="login.aspx"><i class="fa fa-fw fa-user"></i>Login</a>                           
                                 <a href="#signup"><i class="fa-sign-in"></i>Sign Up</a>
                                 <a href="#search"><i class="fa fa-fw fa-search"></i>Search</a>
                             </div>
